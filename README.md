@@ -10,7 +10,7 @@
 ```json
 {
 	"Key": "................................",
-    "Secret": "................"
+	"Secret": "................"
 }
 ```
 * Run a terminal
@@ -31,8 +31,8 @@ python3 FlickrScraper.py
 ```json
 {
 	{
-		'name': 'imagename1',
-		'url': 'http://urlimage1'
+		"name": "imagename1",
+		"url": "http://urlimage1"
 	}
 
 	.
@@ -40,8 +40,8 @@ python3 FlickrScraper.py
 	.
 
 	{
-		'name': 'imagenameN',
-		'url': 'http://urlimageN'
+		"name": "imagenameN",
+		"url": "http://urlimageN"
 	}
 }
 ```
