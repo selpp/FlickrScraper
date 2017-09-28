@@ -5,7 +5,14 @@
 * Will be used to populate a dataset for the CNN trainning
 
 ## How to use ?
-* Past your Key and Secret you've earned from the Flickr API Web Services into the Key.json file
+* Past your Key and Secret you've earned from the Flickr API Web Services into a Key.json file
+* Key.json File:
+```json
+{
+	"Key": "................................",
+    "Secret": "................"
+}
+```
 * Run a terminal
 * Run the config file to install all dependencies
 ```
