@@ -22,7 +22,7 @@ sudo bash config.sh
 ```
 python3 FlickrScraper.py
 ```
-* Type the tag you want to search imahges for
+* Type the tag you want to search images for
 * Let the script do the work
 * Type the json file path (ex: cars.json for a car search)
 
