@@ -49,7 +49,7 @@ def json_resp_to_dict(resp, search_text):
 # Return a flickr object
 # Need the json file with contain the key and the secret
 def initialize_flickr_API(key_file_path):
-	key_file_data = open("Key.json")
+	key_file_data = open(key_file_path)
 	key_file = json.load(key_file_data)
 
 	key = key_file['Key']
