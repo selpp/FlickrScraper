@@ -12,7 +12,7 @@ def exit_error():
 
 # Main method call search function
 def main(argv):
-	scrapers = ['flickr', 'goole']
+	scrapers = ['flickr', 'google']
 
 	if len(argv) < 3:
 		exit_error()
