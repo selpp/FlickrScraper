@@ -21,9 +21,9 @@ sudo bash config.sh
 ```
 * Run the script wtih all the parameters: scraper name (flickr or google) search_text and json_file_name
 ```
-python3 MainScraper flickr car car
+python3 MainScraper.py flickr car car
 
-python3 MainScraper google car car
+python3 MainScraper.py google car car
 ```
 * Let the script do the work
 * The file will be created in the Results folder so make sure to have one in this repo
