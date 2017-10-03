@@ -1,7 +1,7 @@
-# FlickrScraper
+# ImagesScraper
 
 ## What for ?
-* Scrap images from flickr based on a search tag(text).
+* Scrap images from flickr and google based on a search tag(text).
 * Will be used to populate a dataset for the CNN trainning
 
 ## How to use ?
@@ -13,18 +13,20 @@
 	"Secret": "................"
 }
 ```
+* (It will be the same with google API when we will add it)
 * Run a terminal
 * Run the config file to install all dependencies
 ```
 sudo bash config.sh
 ```
-* Run the script
+* Run the script wtih all the parameters: scraper name (flickr or google) search_text and json_file_name
 ```
-python3 FlickrScraper.py
+python3 MainScraper flickr car car
+
+python3 MainScraper google car car
 ```
-* Type the tag you want to search images for
 * Let the script do the work
-* Type the json file path (ex: cars.json for a car search)
+* The file will be created in the Results folder so make sure to have one in this repo
 
 ## Output data ?
 * Json file

@@ -1,6 +1,7 @@
 # Dependencies
 import json
 import flickrapi
+import sys
 from tqdm import *
 from time import sleep
 
@@ -21,6 +22,7 @@ def dict_to_json(dictionnary, json_path):
 			json.dump(data, outfile, indent=4)
 	except:
 		print('[Error] Failed to save the file ...')
+		sys.exit(2)
 
 # Function to build the url and name for each image
 # From a json file (response of the request)
