@@ -1,5 +1,6 @@
 # Dependencies
 import sys
+sys.path.insert(0, 'Flickr/')
 from FlickrScraper import *
 
 # Error exit function
