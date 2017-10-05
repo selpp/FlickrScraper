@@ -24,7 +24,7 @@ def flickr_search(search_text, json_file_path):
 
 	# Write the images data into a json file
 	if(len(images_data) > 0):
-		json_filename = json_file_path
+		json_filename = '../Results/' + json_file_path + '.json'
 		dict_to_json(images_data, json_filename)
 	else:
 		print('[Output] The research dose not have any images related to ...')

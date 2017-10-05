@@ -20,7 +20,7 @@ def main(argv):
 		exit_error()
 
 	if argv[0] == 'flickr':
-		flickr_search(str(argv[1]), 'Results/' + str(argv[2]) + '.json')
+		flickr_search(str(argv[1]), str(argv[2]))
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
