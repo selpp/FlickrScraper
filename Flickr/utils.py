@@ -4,25 +4,12 @@ import flickrapi
 import sys
 from tqdm import *
 from time import sleep
+from mysql_utils import insert_image
 
-# Function to save a dictionnary into a json file
-# {'name': , 'url': } -> {'name': , 'url': }
-def dict_to_json(dictionnary, json_path):
-	data = {}
-	data['image'] = []
-
+# Function to save a dictionnary into a DB
+def dict_to_db(scraper, label, dictionnary, cursor, connection):
 	for d in dictionnary:
-		data['image'].append({
-			'name': d['name'],
-			'url': d['url']
-		})
-
-	try:
-		with open(json_path, 'w') as outfile:
-			json.dump(data, outfile, indent=4)
-	except:
-		print('[Error] Failed to save the file ...')
-		sys.exit(2)
+		insert_image(scraper, label, d['url'], cursor, connection)
 
 # Function to build the url and name for each image
 # From a json file (response of the request)
@@ -40,11 +27,7 @@ def json_resp_to_dict(resp, search_text):
 		url += "_" + str(resp[i]['secret'])
 		url += ".jpg"
 
-		name = search_text.replace(" ", "_") + "_"
-		name += str(resp[i]['server']) + "_"
-		name += str(resp[i]['id'])
-
-		images_data.append({'name': name, 'url': url})
+		images_data.append({'url': url})
 	return(images_data)
 
 # Function to initialize the Flickr API
@@ -82,6 +65,9 @@ def search_on_flickr(flickr, search_text, per_page):
 
 	# Perform the search for other pages
 	for page in tqdm(range(1, page_number + 1)):
+		if(page > 3):
+			break;
+
 		sleep(1)
 
 		try:

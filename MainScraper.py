@@ -5,8 +5,8 @@ from FlickrScraper import *
 
 # Error exit function
 def exit_error():
-	print('[Error] Argument errors, should be : python MainScraper flickr/google search_text json_save_file_name')
-	print('[Error] use example: python MainScraper flickr car car')
+	print('[Error] Argument errors, should be : python MainScraper flickr/google search_text label')
+	print('[Error] use example: python MainScraper flickr car 0')
 	print('\n')
 	print('===========================================\n')
 	sys.exit(2)
@@ -21,7 +21,7 @@ def main(argv):
 		exit_error()
 
 	if argv[0] == 'flickr':
-		flickr_search(str(argv[1]), str(argv[2]))
+		flickr_search(argv[1], argv[0], argv[2])
 
 if __name__ == "__main__":
 	main(sys.argv[1:])
