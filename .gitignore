@@ -62,3 +62,7 @@ Results/
 Key\.json
 
 Flickr/Database\.json
+
+V2_0/src/APIKeys/MySqlConfig\.json
+
+V2_0/src/APIKeys/FlickrAPIConfig\.json

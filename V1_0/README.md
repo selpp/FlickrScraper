@@ -1,4 +1,4 @@
-# ImagesScraper
+# TIDMARSH ImagesScraper V1.0
 
 ## What for ?
 * Scrap images from flickr and google based on a search tag(text).
@@ -23,6 +23,7 @@
 	"password": "--------",
 	"db": "--------"
 }
+```
 * Run a terminal
 * Run the config file to install all dependencies
 ```
@@ -35,7 +36,6 @@ python3 MainScraper.py flickr car 0
 python3 MainScraper.py google car 0
 ```
 * Let the script do the work
-* The file will be created in the Results folder so make sure to have one in this repo
 
 ## Output data ?
 * Save into a data base
