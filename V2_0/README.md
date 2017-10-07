@@ -29,7 +29,8 @@
 	"user": "------",
 	"password": "--------",
 	"db": "--------"
-}```
+}
+```
 * Run a terminal
 * Run the config file to install all dependencies
 ```
