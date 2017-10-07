@@ -36,8 +36,8 @@ def main(search, label):
 
 	database = MySqlSession('APIKeys/MySqlConfig.json', 'Image_Test')
 
-	flickr_scraper = FlickrScraper(1, 'APIKeys/FlickrAPIConfig.json')
-	flickr_scraper.scrap_images(search, database, label, max_page = 2)
+	flickr_scraper = FlickrScraper(500, 'APIKeys/FlickrAPIConfig.json')
+	flickr_scraper.scrap_images(search, database, label)
 
 	database.disconnect()
 
