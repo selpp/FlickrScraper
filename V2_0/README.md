@@ -36,9 +36,9 @@
 ```
 sudo bash config.sh
 ```
-* Run the script scraper_exec.py in src/ wtih all the parameters: search label
+* Run the script scraper_exec.py in src/ wtih all the parameters: search label table
 ```
-python3 scraper_exec.py --search=car --label=0
+python3 scraper_exec.py --search=car --label=0 --table=Image_Test
 ```
 * Let the script do the work
 * It will add the images urls into the database
